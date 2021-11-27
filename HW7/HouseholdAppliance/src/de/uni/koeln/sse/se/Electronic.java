@@ -66,7 +66,7 @@ public class Electronic implements HouseholdItem{
 
 	@Override
 	public void printPackaging(){
-		System.out.println("should be covered with Polyethylene foam and packed in a box with dimension : "
+		System.out.println("Electronics should be covered with Polyethylene foam and packed in a box with dimension : "
 				+ this.length + "x" + this.width + "x" + this.height );
 	};
 
