@@ -1,22 +1,20 @@
-package de.uni.koeln.sse.se;
-
 public class Furniture implements HouseholdItem{
 	
 	String name;
 	String type;
 
 
-	int lenght;
+	int length;
 	int width;
 	int height;
 	
 	int weight;
 
 	
-	public Furniture(String name, String type, int lenght, int width, int height, int weight) {
+	public Furniture(String name, String type, int length, int width, int height, int weight) {
 		this.name = name;
 		this.type = type;
-		this.lenght = lenght;
+		this.length = length;
 		this.width = width;
 		this.height = height;
 		this.weight = weight;
@@ -32,25 +30,25 @@ public class Furniture implements HouseholdItem{
 	public int getHeight() {
 		return height;}
 
-	public void setHeight(Integer height) {
+	public void setHeight(int height) {
 		this.height = height;}
 
-	public int getLenght() {
-		return lenght;}
+	public int getLength() {
+		return length;}
 
-	public void setLenght(Integer lenght) {
-		this.lenght = lenght;}
+	public void setLength(int length) {
+		this.length = length;}
 
 	public int getWidth() {
 		return width;	}
 
-	public void setWidth(Integer width) {
+	public void setWidth(int width) {
 		this.width = width;}
 
 	public int getWeight() {
 		return weight;}
 
-	public void setWeight(Integer weight) {
+	public void setWeight(int weight) {
 		this.weight = weight;}
 
 	public String getType() {
@@ -65,5 +63,13 @@ public class Furniture implements HouseholdItem{
 	public void setName(String name) {
 		this.name = name;}
 
-	
+	public double getCost() {
+		return weight * 0.25;
+	}
+
+	@Override
+	public void printPackaging(){
+		System.out.println("should be covered with waterproof covers with area of: "
+				+ this.length + "x" + this.width);
+	};
 }
