@@ -1,10 +1,8 @@
-package de.uni.koeln.sse.se;
-
 public class Electronic implements HouseholdItem{
 	
 	String name;
 	
-	int lenght;
+	int length;
 	int width;
 	int height;
 
@@ -14,9 +12,9 @@ public class Electronic implements HouseholdItem{
 	
 
 
-	public Electronic(String name, int lenght, int width, int height, int weight, Boolean fragile) {
+	public Electronic(String name, int length, int width, int height, int weight, Boolean fragile) {
 		this.name = name;
-		this.lenght = lenght;
+		this.length = length;
 		this.width = width;
 		this.height = height;
 		this.weight = weight;
@@ -29,25 +27,25 @@ public class Electronic implements HouseholdItem{
 	public int getHeight() {
 		return height;}
 
-	public void setHeight(Integer height) {
+	public void setHeight(int height) {
 		this.height = height;}
 
-	public int getLenght() {
-		return lenght;}
+	public int getLength() {
+		return length;}
 
-	public void setLenght(Integer lenght) {
-		this.lenght = lenght;}
+	public void setLength(int length) {
+		this.length = length;}
 
 	public int getWidth() {
 		return width;}
 
-	public void setWidth(Integer width) {
+	public void setWidth(int width) {
 		this.width = width;}
 
-	public Integer getWeight() {
+	public int getWeight() {
 		return weight;}
 
-	public void setWeight(Integer weight) {
+	public void setWeight(int weight) {
 		this.weight = weight;}
 
 	public String getName() {
@@ -61,8 +59,15 @@ public class Electronic implements HouseholdItem{
 
 	public void setFragile(Boolean fragile) {
 		this.fragile = fragile;}
-	
-	
-	
+
+	public double getCost() {
+		return fragile ? weight*0.5 : weight/3;
+	}
+
+	@Override
+	public void printPackaging(){
+		System.out.println("should be covered with Polyethylene foam and packed in a box with dimension : "
+				+ this.length + "x" + this.width + "x" + this.height );
+	};
 
 }
