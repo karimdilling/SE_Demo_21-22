@@ -69,7 +69,7 @@ public class Furniture implements HouseholdItem{
 
 	@Override
 	public void printPackaging(){
-		System.out.println("should be covered with waterproof covers with area of: "
+		System.out.println("Furniture should be covered with waterproof covers with area of: "
 				+ this.length + "x" + this.width);
 	};
 }
