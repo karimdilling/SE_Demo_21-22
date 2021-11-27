@@ -67,7 +67,7 @@ public class Glass implements HouseholdItem{
 
 	@Override
 	public void printPackaging(){
-		System.out.println("should be wrapped with Bubble wraps and packed in a box with dimension" +
+		System.out.println("Glass should be wrapped with Bubble wraps and packed in a box with dimension" +
 				this.length + "x" + this.width + "x" + this.height );
 	};
 
